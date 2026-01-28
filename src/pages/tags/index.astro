@@ -9,9 +9,9 @@ const tags = [...new Set(blogs.map((blog) => blog.data.tags).flat())].sort();
 
 <BaseLayout
   title="Tags"
-  description="All unique tags of Ryze blogs"
-  author="Rahul"
-  url="https://ryze.pages.dev/tags/1"
+  description="All unique tags of Huoi's blogs"
+  author="Huoi"
+  url=`https://huoi.github.io/${import.meta.env.BASE_URL}/tags/1``
 >
   <div class="center">
     <h1 class="heading">Tags</h1>
@@ -21,7 +21,7 @@ const tags = [...new Set(blogs.map((blog) => blog.data.tags).flat())].sort();
           return (
             <li>
               <a
-                href={`/tags/${tag}/1`}
+                href={`${import.meta.env.BASE_URL}/tags/${tag}/1`}
                 class="paragraph hover:text-accent animation"
               >
                 {tag}
